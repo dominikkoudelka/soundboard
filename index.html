@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+<style>
+body {
+    background-color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+button{
+    background-color: black;
+    border: 57%;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  21px 21px 39px #bebebe,
+                 -21px -21px 39px #ffffff;
+    font-size: 1rem;
+}
+
+
+:root{
+    font-size: 100px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    <main>
+    <BUtton data-src="y2mate.com - Goofy Ahh Fart  Sound Effect.mp3">fart</BUtton>
+    <button data-src="y2mate.com - goofy ahh laugh sfx.mp3">laugh</button>
+    <button data-src="indian-music-bass-boosted (1).mp3">indian</button>
+    <button data-src="meme-de-creditos-finales.mp3">end</button>
+    </main>
+    <br><br><br>
+    <button onclick="window.location.reload()">🛑</button>
+    <audio src="meme-de-creditos-finales.mp3"></audio>
+    <audio src="y2mate.com - Goofy Ahh Fart  Sound Effect.mp3"></audio>
+    <audio src="y2mate.com - goofy ahh laugh sfx.mp3"></audio>
+    <audio src="indian-music-bass-boosted (1).mp3"></audio>
+    <script>
+        var x = document.querySelectorAll("audio");
+        var b = document.querySelectorAll("button");
+
+        b.forEach(item => {
+           item.addEventListener('click', () => {
+                document.querySelector('audio[src="' + item.getAttribute("data-src") + '"]').play();
+           });
+        });
+    </script>
+</body>
+</html>
